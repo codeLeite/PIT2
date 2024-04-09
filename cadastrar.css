@@ -8,7 +8,7 @@
 body{
   display: flex;
   justify-content: center;
-  background-color: #eb7620;
+  background-color: #C3ECBC;
 }
 
 .back-link{
@@ -106,14 +106,14 @@ form{
   align-items: center;
   max-width: 75rem;
   width: 100%;
-  background-color: #1f1d06;
+  background-color: lightgray;
   padding: 2rem;
   margin: 0 auto;
 }
 
 .cabecalho{
   display: grid;
-  color: #FCFCFD;
+  color: #0a0a0a;
   margin: 0 auto;
 }
 
@@ -157,7 +157,7 @@ form input{
 form button{
   font-size: 1rem;
   color: #FCFCFD;
-  border: 1px solid #000;
+  border: none;
   font-weight: bold;
   border-radius: 10px;
   background-color: #f15048;
