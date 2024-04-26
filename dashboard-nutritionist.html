@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./dashboard-user.css">
+  <link rel="stylesheet" href="./dashboard-nutritionist.css">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
@@ -16,10 +16,8 @@
   <aside>
     <img src="images/MyFitnessHelp-logo.png" alt="Logo" />
     <div class="menu">
-    <a href="./dashboard-user.html"><button type="button" class="active"><i class="fa-solid fa-chart-simple"></i>Dashboard</button></a>
-    <a href="./dieta-user.html"><button type="button"><i class="fa-brands fa-nutritionix"></i>Dieta</button></a>
-    <a href="./request-diet.html"><button type="button"><i class="fa-solid fa-plus"></i>Solicitar nova dieta</button></a>
-    <!-- <a href="./perfil-user.html"><button type="button"><i class="fa-solid fa-user"></i>Perfil</button></a> -->
+      <a href="./dashboard-nutritionist.html"><button type="button" class="active"><i class="fa-solid fa-chart-simple"></i>Clientes</button></a>
+      <!-- <a href="./dieta-user.html"><button type="button"><i class="fa-brands fa-nutritionix"></i>Dieta</button></a> -->
     </div>
   </aside>
  <section>
@@ -27,82 +25,108 @@
   <div class="breadcrumb">
     <span>Dashboard</span>
     <span>></span>
-    <span class="is-active">Home</span>
+    <span class="is-active">Clientes</span>
   </div>
   <div class="diet-wrapper">
     <div class="diet-card">
-      <span class="diet-icon"><i class="fa-solid fa-chart-line"></i></span>
+      <span class="diet-icon"><i class="fa-solid fa-user"></i></span>
       <div class="diet-info">
-        <p class="diet-highlight">-5.2kg</p>
-        <p class="diet-title">Peso</p>
+        <p class="diet-highlight">100</p>
+        <p class="diet-title">Total de clientes</p>
       </div>
     </div>
     <div class="diet-card">
-      <span class="diet-icon"><i class="fa-solid fa-percent"></i></span>
+      <span class="diet-icon"><i class="fa-solid fa-money-bill"></i></span>
       <div class="diet-info">
-        <p class="diet-highlight">15%</p>
-        <p class="diet-title">Porcentagem de gordura</p>
+        <p class="diet-highlight">R$ 5780,00</p>
+        <p class="diet-title">Renda Mensal</p>
       </div>
     </div>
     <div class="diet-card">
       <span class="diet-icon"><i class="fa-solid fa-gauge"></i></span>
       <div class="diet-info">
-        <p class="diet-highlight">22.5</p>
-        <p class="diet-title">IMC</p>
+        <p class="diet-highlight">5</p>
+        <p class="diet-title">Dietas pendentes</p>
       </div>
     </div>
   </div>
   <div class="content-wrapper">
     <div class="content-card">
-      <h2>Sua evolução</h2>
+      <h2>Últimos Clientes</h2>
       <table>
         <thead>
           <tr>
-            <th>Data</th>
-            <th>Peso</th>
-            <th>% de gordura</th>
+            <th>Identificação</th>
+            <th>Nome</th>
+            <th>Diteta</th>
+            <th>Enviada em</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>
-              <p>03/04/2024</p>
+              <p>#65SFT1</p>
             </td>
-            <td>82.5kg</td>
-            <td>12%</td>
+            <td>
+              <p>Pedro Oliveira</p>
+            </td>
+            <td>Paleolítica</td>
+            <td>21/03/2024</td>
           </tr>
           <tr>
             <td>
-              <p>03/04/2024</p>
+              <p>#716HDT</p>
             </td>
-            <td>82.5kg</td>
-            <td>15%</td>
+            <td>
+              <p>Juliano Ferreira</p>
+            </td>
+            <td>Dukan</td>
+            <td>22/03/2024</td>
           </tr>
           <tr>
             <td>
-              <p>03/04/2024</p>
+              <p>#E54DHJ</p>
             </td>
-            <td>82.5kg</td>
-            <td>18%</td>
+            <td>
+              <p>Paulo Henrique</p>
+            </td>
+            <td>Low</td>
+            <td>23/03/2024</td>
           </tr>
           <tr>
             <td>
-              <p>03/04/2024</p>
+              <p>#762HFS</p>
             </td>
-            <td>82.5kg</td>
-            <td>15%</td>
+            <td>
+              <p>Julia Ferraz</p>
+            </td>
+            <td>Dukan</td>
+            <td>23/03/2024</td>
           </tr>
           <tr>
             <td>
-              <p>03/04/2024</p>
+              <p>#98267HFFGD</p>
             </td>
-            <td>82.5kg</td>
-            <td>12%</td>
+            <td>
+              <p>Felipe Nogueira</p>
+            </td>
+            <td>Low</td>
+            <td>25/03/2024</td>
+          </tr>
+          <tr>
+            <td>
+              <p>#E54DHJ</p>
+            </td>
+            <td>
+              <p>Yuri Rodrigues</p>
+            </td>
+            <td>Paleolítica</td>
+            <td>27/03/2024</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="content-card">
+    <!-- <div class="content-card">
       <h2>Últimas atualizações</h2>
       <div class="updates">
         <div class="update-card">
@@ -121,7 +145,7 @@
           <p>03/04/2024</p>
           <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
         </div>
-      </div>
+      </div> -->
   </div>
  </section>
   <script src="./main.js"></script>
