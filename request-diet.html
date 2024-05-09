@@ -30,6 +30,9 @@
     <span class="is-active">Solicitar nova dieta</span>
   </div>
   <div class="container">
+    <div class="request-image">
+      <img src="./images/undraw_analysis_dq08.svg">
+    </div>
     <div class="container-flex">
       <h2>Preencha as informações</h2>
       <form class="form-request">
@@ -71,6 +74,12 @@
         <div class="form-campo">
           <label for="altura">Sua altura</label>
           <input type="text" name="altura" id="altura" placeholder="Insira sua altura">
+        </div>
+        <div class="form-campo">
+          <label for="altura">Selecione um nutricionista</label>
+          <select name="nutricionistas" id="nutricionista">
+            <option value="sem-selecao">Selecione</option>
+          </select>
         </div>
         <div class="form-campo">
           <button type="submit">Solicitar dieta</button>

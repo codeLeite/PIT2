@@ -108,10 +108,10 @@ section h1{
 }
 
 .container{
-  display: grid;
+  display: grid; 
+  align-items: center;
   grid-template-columns: repeat(2, 1fr);
-  margin-left: 7rem;
-  margin-top: 5rem;
+  margin-left: 5rem;
 }
 
 .container-flex{
@@ -120,6 +120,7 @@ section h1{
   width: 100%;
   max-width: 22rem;
   text-align: center;
+  margin: auto;
 }
 
 .container-flex h2{
@@ -174,4 +175,8 @@ form {
 
 .form-radio-campo{
   padding: .5rem;
+}
+
+.request-image img{
+  width: 90%;
 }
