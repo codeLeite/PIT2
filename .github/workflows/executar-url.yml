@@ -11,4 +11,4 @@ jobs:
 
     steps:
     - name: Curl para executar a URL
-      run: curl -X POST http://89.116.73.154:3000/api/deploy/e9089ae3882b4e294040bc3ca41a42dc7c8869b83cc1232d
+      run: curl -X POST http://89.116.73.154:3000/api/deploy/4941fad56bf6339ac15410aa604570f116f16d8f52d4bce7

@@ -4,7 +4,7 @@ $('#form-login-cliente').on('submit', e => {
   const senha = $('#senha').val()
 
   $.ajax({
-    url: 'https://pit2-api.pd8edx.easypanel.host/usuario/cliente/login',
+    url: 'https://pit2-api.pd8edx.easypanel.host/api/usuario/cliente/login',
     method: 'post',
     data: { email, senha },
     dataType: 'json',
