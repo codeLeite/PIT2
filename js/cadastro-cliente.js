@@ -66,6 +66,10 @@ $(document).ready(function () {
         "observacao": $('#observacao').val()
       }
     } 
+    if(body.senha !== $('#conf-senha').val()){
+      return alert('As senhas não conferem!')
+    }
+
     const response = await $.post('https://pit2-api.pd8edx.easypanel.host/api/usuario/cliente/cadastrar',body)
     alert(response.message)
   })
