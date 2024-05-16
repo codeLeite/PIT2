@@ -9,6 +9,6 @@ $(document).on('ready', async function(){
     template.find(".objetivoFoco").text(dieta.objetivoFoco)
     template.find(".solicitacao").text(new Date(dieta.dataCriacao).toLocaleString('pt-BR'))
 
-    $("#table#tabela-pendentes tbody").append(template.html())
+    $("table#tabela-pendentes tbody").append(template.html())
   }
 })
