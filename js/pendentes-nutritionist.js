@@ -4,10 +4,10 @@ $(document).on('ready', async function(){
   for(const {dieta} of clientesPendentes){
     const template = $($('#template-cliente').html()).clone()
 
-    script.find(".id").text(dieta.cliente.id)
-    script.find(".nome").text(`${dieta.cliente.usuario.nome} ${dieta.cliente.usuario.sobrenome}`)
-    script.find(".id").text(dieta.objetivoFoco)
-    script.find(".id").text(new Date(dieta.dataCriacao).toLocaleString('pt-BR'))
+    template.find(".id").text(dieta.cliente.id)
+    template.find(".nome").text(`${dieta.cliente.usuario.nome} ${dieta.cliente.usuario.sobrenome}`)
+    template.find(".objetivoFoco").text(dieta.objetivoFoco)
+    template.find(".solicitacao").text(new Date(dieta.dataCriacao).toLocaleString('pt-BR'))
 
     $("#table#tabela-pendentes tbody").append(template.html())
   }
