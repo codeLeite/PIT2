@@ -54,8 +54,19 @@ $(document).ready(function () {
     }
   })
 
-  $('#cadastro-cliente').on('submit', e => {
-    e.preventDefault()
-    console.log('submit')
+  $('#cadastro-cliente').on('submit', async function(){
+    const body = {
+      "email": $('#email').val(),
+      "senha": $('#senha').val(),
+      "nome": $('#nome').val(),
+      "sobrenome": $('#sobrenome').val(),
+      "telefone": $('#telefone').cleanVal(),
+      "cliente": {
+        "objetivo": $('#objetivo').val(),
+        "observacao": $('#observacao').val()
+      }
+    } 
+    const clientesPendentes = await $.post('https://pit2-api.pd8edx.easypanel.host/api/usuario/cliente/cadastrar',body)
   })
-})
+
+  })

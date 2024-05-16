@@ -135,14 +135,15 @@ form i{
 
 .input-container{
   display: flex;
-  justify-content: center;
   align-items: center;
+  width: 60%;
   background-color: #FCFCFD;
   border: none;
   box-shadow: 0.2rem 0.2rem 0.12rem 0.06rem rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: .5rem;
-  padding-left: 0.8rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-top: 0.6rem;
 }
 
@@ -172,4 +173,14 @@ form button:hover{
   cursor: pointer;
 }
 
-
+form select{
+  min-width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: start;
+  padding-left: 0.4rem;
+  font-size: 0.8rem;
+  position: relative;
+  font-weight: 600;
+}
