@@ -66,7 +66,8 @@ $(document).ready(function () {
         "observacao": $('#observacao').val()
       }
     } 
-    const clientesPendentes = await $.post('https://pit2-api.pd8edx.easypanel.host/api/usuario/cliente/cadastrar',body)
+    const response = await $.post('https://pit2-api.pd8edx.easypanel.host/api/usuario/cliente/cadastrar',body)
+    alert(response.message)
   })
 
   })
