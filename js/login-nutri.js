@@ -4,7 +4,7 @@ $('#form-login-nutricionista').on('submit', e => {
   const senha = $('#senha').val()
 
   $.ajax({
-    url: 'http://localhost:3000/usuario/nutricionista/login',
+    url: 'https://pit2-api.pd8edx.easypanel.host/api/usuario/nutricionista/login',
     method: 'post',
     data: { email, senha },
     dataType: 'json',
