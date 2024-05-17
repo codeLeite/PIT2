@@ -32,21 +32,21 @@
     <div class="diet-card">
       <span class="diet-icon"><i class="fa-solid fa-user"></i></span>
       <div class="diet-info">
-        <p class="diet-highlight">100</p>
+        <p class="diet-highlight" id="total-clientes">100</p>
         <p class="diet-title">Total de clientes</p>
       </div>
     </div>
     <div class="diet-card">
       <span class="diet-icon"><i class="fa-solid fa-money-bill"></i></span>
       <div class="diet-info">
-        <p class="diet-highlight">R$ 5780,00</p>
+        <p class="diet-highlight" id="renda-nutricionista">R$ 5780,00</p>
         <p class="diet-title">Renda Mensal</p>
       </div>
     </div>
     <div class="diet-card">
       <span class="diet-icon"><i class="fa-solid fa-gauge"></i></span>
       <div class="diet-info">
-        <p class="diet-highlight">5</p>
+        <p class="diet-highlight" id="dietas-pendentes">5</p>
         <p class="diet-title">Dietas pendentes</p>
       </div>
     </div>
@@ -54,108 +54,37 @@
   <div class="content-wrapper">
     <div class="content-card">
       <h2>Últimos Clientes</h2>
-      <table>
+      <table id="tabela-ultimos">
         <thead>
           <tr>
             <th>Identificação</th>
             <th>Nome</th>
             <th>Dieta</th>
             <th>Enviada em</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <p>#65SFT1</p>
-            </td>
-            <td>
-              <p>Pedro Oliveira</p>
-            </td>
-            <td>Paleolítica</td>
-            <td>21/03/2024</td>
-          </tr>
-          <tr>
-            <td>
-              <p>#716HDT</p>
-            </td>
-            <td>
-              <p>Juliano Ferreira</p>
-            </td>
-            <td>Dukan</td>
-            <td>22/03/2024</td>
-          </tr>
-          <tr>
-            <td>
-              <p>#E54DHJ</p>
-            </td>
-            <td>
-              <p>Paulo Henrique</p>
-            </td>
-            <td>Low</td>
-            <td>23/03/2024</td>
-          </tr>
-          <tr>
-            <td>
-              <p>#762HFS</p>
-            </td>
-            <td>
-              <p>Julia Ferraz</p>
-            </td>
-            <td>Dukan</td>
-            <td>23/03/2024</td>
-          </tr>
-          <tr>
-            <td>
-              <p>#98267HFFGD</p>
-            </td>
-            <td>
-              <p>Felipe Nogueira</p>
-            </td>
-            <td>Low</td>
-            <td>25/03/2024</td>
-          </tr>
-          <tr>
-            <td>
-              <p>#E54DHJ</p>
-            </td>
-            <td>
-              <p>Yuri Rodrigues</p>
-            </td>
-            <td>Paleolítica</td>
-            <td>27/03/2024</td>
-          </tr>
         </tbody>
       </table>
     </div>
-    <!-- <div class="content-card">
-      <h2>Últimas atualizações</h2>
-      <div class="updates">
-        <div class="update-card">
-          <p>03/04/2024</p>
-          <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-        </div>
-        <div class="update-card">
-          <p>03/04/2024</p>
-          <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-        </div>
-        <div class="update-card">
-          <p>03/04/2024</p>
-          <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-        </div>
-        <div class="update-card">
-          <p>03/04/2024</p>
-          <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-        </div>
-      </div> -->
   </div>
  </section>
-  <script src="./main.js"></script>
+ <template id="template-cliente">
+  <tr>
+    <td class="id"></td>
+    <td class="nome"></td>
+    <td class="dieta"></td>
+    <td class="enviada"></td>
+    <td><i class="fa-solid fa-paper-plane"></i></td>
+  </tr>
+ </template>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="./js/jquery.mask.min.js"></script>
   <script src="./js/jquery.validate.min.js"></script>
   <script src="./js/messages_pt_BR.min.js"></script>
-  <script src="./js/script.js"></script>
+  <script src="./js/dashboard-nutritionist.js"></script>
   <script src="https://kit.fontawesome.com/2ec39d4a84.js" crossorigin="anonymous"></script>
 </body>
 </html>

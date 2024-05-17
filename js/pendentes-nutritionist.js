@@ -1,5 +1,6 @@
 $(document).on('ready', async function(){
-  const clientesPendentes = await $.get('https://pit2-api.pd8edx.easypanel.host/api/nutricionista/clientes/pendentes/1')
+  const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario'))
+  const clientesPendentes = await $.get(`https://pit2-api.pd8edx.easypanel.host/api/nutricionista/clientes/pendentes/${dadosUsuario.nutricionista.id}`)
 
   for(const {dieta} of clientesPendentes){
     const template = $($('#template-cliente').html()).clone()

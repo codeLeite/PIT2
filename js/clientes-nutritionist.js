@@ -1,6 +1,7 @@
 $(document).on('ready', async function () {
+  const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario'))
   const listaClientes = await $.ajax({
-    url: 'https://pit2-api.pd8edx.easypanel.host/api/nutricionista/clientes/1'
+    url: `https://pit2-api.pd8edx.easypanel.host/api/nutricionista/clientes/${dadosUsuario.nutricionista.id}`
   })
 
   listaClientes.forEach(({ dieta }) => {
@@ -8,7 +9,7 @@ $(document).on('ready', async function () {
       dieta.cliente.id,
       `${dieta.cliente.usuario.nome} ${dieta.cliente.usuario.sobrenome}`,
       dieta.objetivoFoco,
-      Date.now(),
+      new Date(dieta.dataCriacao).toLocaleString('pt-BR'),
       '<i class="fa-solid fa-eye"></i>'
     )
 
