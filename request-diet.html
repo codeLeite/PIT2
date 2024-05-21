@@ -35,33 +35,19 @@
     </div>
     <div class="container-flex">
       <h2>Preencha as informações</h2>
-      <form class="form-request">
+      <form class="form-request" id="form-request">
         <div class="form-campo">
           <label for="nome">Nome completo</label>
           <input type="text" name="nome" id="nome" placeholder="Insira seu nome aqui" disabled>
         </div>
         <div class="form-campo">
-          <label for="data-nasc">Data de nascimento</label>
-          <input type="date" name="data-nasc" id="data-nasc">
-        </div>
-        
-        <div class="form-radio-container">
-          <span>Gênero</span>
-          <div class="form-radio-campo">
-            <div>
-              <input type="radio" id="masculino" name="genero" value="masculino">
-              <label for="masculino">Masculino</label>
-            </div>
-            <div>
-              <input type="radio" id="feminino" name="genero" value="feminino">
-              <label for="feminino">Feminino</label>
-            </div>
-          </div>
+          <label for="genero">Gênero</label>
+          <input type="text" id="genero" disabled>
         </div>
         <div class="form-campo">
-          <label for="tipo-dieta">Qual seu objetivo?</label>
+          <label for="tipo-dieta">Qual seu objetivo atual?</label>
           <select name="tipo-dieta" id="tipo-dieta">
-            <option value="selecione">Selecione</option>
+            <option value="">Selecione</option>
             <option value="perda-peso">Perda de peso</option>
             <option value="ganho-massa">Ganho de massa</option>
             <option value="manter-peso">Manter Peso</option>
@@ -78,7 +64,7 @@
         <div class="form-campo">
           <label for="altura">Selecione um nutricionista</label>
           <select name="nutricionistas" id="nutricionistas">
-            <option value="sem-selecao">Selecione</option>
+            <option value="">Selecione</option>
           </select>
         </div>
         <div class="form-campo">

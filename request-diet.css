@@ -143,6 +143,12 @@ section h1{
   padding: 8px;
 }
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
 form {
   max-width: 360px;
 }
