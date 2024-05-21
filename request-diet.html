@@ -38,7 +38,7 @@
       <form class="form-request">
         <div class="form-campo">
           <label for="nome">Nome completo</label>
-          <input type="text" name="nome" id="nome" placeholder="Insira seu nome aqui">
+          <input type="text" name="nome" id="nome" placeholder="Insira seu nome aqui" disabled>
         </div>
         <div class="form-campo">
           <label for="data-nasc">Data de nascimento</label>
@@ -68,16 +68,16 @@
           </select>
         </div>
         <div class="form-campo">
-          <label for="peso">Peso atual</label>
+          <label for="peso">Peso atual <span class="sub-label">(em kg)</span></label>
           <input type="text" name="peso" id="peso" placeholder="Insira seu peso atual">
         </div>
         <div class="form-campo">
-          <label for="altura">Sua altura</label>
+          <label for="altura">Sua altura <span class="sub-label">(em cm)</span></label>
           <input type="text" name="altura" id="altura" placeholder="Insira sua altura">
         </div>
         <div class="form-campo">
           <label for="altura">Selecione um nutricionista</label>
-          <select name="nutricionistas" id="nutricionista">
+          <select name="nutricionistas" id="nutricionistas">
             <option value="sem-selecao">Selecione</option>
           </select>
         </div>
@@ -88,13 +88,12 @@
     </div>
   </div>
  </section>
-  <script src="./main.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="./js/jquery.mask.min.js"></script>
   <script src="./js/jquery.validate.min.js"></script>
   <script src="./js/messages_pt_BR.min.js"></script>
-  <script src="./js/script.js"></script>
+  <script src="./js/request-diet.js"></script>
   <script src="https://kit.fontawesome.com/2ec39d4a84.js" crossorigin="anonymous"></script>
 </body>
 </html>
