@@ -1,9 +1,16 @@
 $(document).ready(function () {
   $('#telefone').mask('(00) 00000-0000')
+  $('#data-nasc').mask('00/00/0000', {placeholder: 'dd/mm/aaaa' });
 
   $('#cadastro-cliente').validate({
     rules: {
       nome: {
+        required: true
+      },
+      sobrenome: {
+        required: true
+      },
+      'data-nasc': {
         required: true
       },
       email: {
@@ -27,17 +34,27 @@ $(document).ready(function () {
       },
       'conf-senha': {
         required: true
+      },
+      genero: {
+        required: true
+      },
+      objetivo:{
+        required: true
       }
     },
     messages: {
       nome: 'Por favor, insira o seu nome',
+      sobrenome: 'Por favor, insira o seu sobrenome',
+      'data-nasc': 'Por favor, insira a sua data de nascimento',
       telefone: 'Por favor, insira seu telefone',
       email: 'Por favor, insira um email válido',
       cpf: 'Por favor, insira seu CPF',
       endereco: 'Por favor, insira seu endereço',
       cep: 'Por favor, insira seu CEP',
       senha: 'Por favor, digite a senha',
-      'conf-senha': 'Por favor, confirme a senha'
+      'conf-senha': 'Por favor, confirme a senha',
+      genero: 'Por favor, insira o seu gênero',
+      objetivo: 'Por favor, selecione um objetivo'
     },
     submitHandler: function (form) {
       console.log(form)
@@ -60,6 +77,8 @@ $(document).ready(function () {
       "senha": $('#senha').val(),
       "nome": $('#nome').val(),
       "sobrenome": $('#sobrenome').val(),
+      "dataNascimento": $('#data-nasc').cleanVal(),
+      "genero": $('#genero').val(),
       "telefone": $('#telefone').cleanVal(),
       "cliente": {
         "objetivo": $('#objetivo').val(),

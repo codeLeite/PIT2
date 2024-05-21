@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $('#telefone').mask('(00) 00000-0000')
+  $('#data-nasc').mask('00/00/0000', {placeholder: 'dd/mm/aaaa' });
 
   $('#cadastro-nutri').validate({
     rules: {
@@ -7,6 +8,9 @@ $(document).ready(function () {
         required: true
       },
       sobrenome: {
+        required: true
+      },
+      'data-nasc': {
         required: true
       },
       email: {
@@ -25,6 +29,9 @@ $(document).ready(function () {
       'conf-senha': {
         required: true
       },
+      genero: {
+        required: true
+      },
       'crx-id': {
         required: true
       }
@@ -32,11 +39,13 @@ $(document).ready(function () {
     messages: {
       nome: 'Por favor, insira o seu nome',
       sobrenome: 'Por favor, insira o seu sobrenome',
+      'data-nasc': 'Por favor, insira a sua data de nascimento',
       telefone: 'Por favor, insira seu telefone',
       email: 'Por favor, insira um email válido',
       uf: 'Por favor, insira sua UF',
       senha: 'Por favor, digite a senha',
       'conf-senha': 'Por favor, confirme a senha',
+      genero: 'Por favor, insira o seu gênero',
       'crx-id': 'Por favor, escreva seu ID'
     },
     submitHandler: function (form) {
@@ -61,6 +70,8 @@ $(document).ready(function () {
         "senha": $('#senha').val(),
         "nome": $('#nome').val(),
         "sobrenome": $('#sobrenome').val(),
+        "dataNascimento": $('#data-nasc').cleanVal(),
+        "genero": $('#genero').val(),
         "telefone": $('#telefone').cleanVal(),
         "nutricionista": {
           "uf": $('#uf').val(),

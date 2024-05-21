@@ -129,6 +129,12 @@ form input, button{
   font-weight: 600;
 }
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
 form i{
   width: 1rem;
 }
@@ -188,4 +194,13 @@ form select{
 .error{
   margin: 0;
   font-size: 12px;
+}
+
+.form-radio-container{
+  text-align: left;
+  display: inline;
+}
+
+.form-radio-campo{
+  padding: .5rem;
 }
