@@ -92,5 +92,4 @@ $(document).ready(function () {
     const response = await $.post('https://pit2-api.pd8edx.easypanel.host/api/usuario/cliente/cadastrar',body)
     alert(response.message)
   })
-
   })
