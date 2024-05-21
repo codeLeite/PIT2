@@ -170,6 +170,10 @@ section h1{
   margin-bottom: 1rem;
 }
 
+.username-div{
+  margin-top: 1rem;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;

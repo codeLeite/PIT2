@@ -3,6 +3,7 @@ $(document).on('ready', async () =>{
   const clientesPendentes = await $.get(`https://pit2-api.pd8edx.easypanel.host/api/nutricionista/clientes/pendentes/${dadosUsuario.nutricionista.id}`)
   const totalClientes = await $.get(`https://pit2-api.pd8edx.easypanel.host/api/nutricionista/clientes/${dadosUsuario.nutricionista.id}`)
 
+  $('#user-name').text(`Olá, ${dadosUsuario.nome} ${dadosUsuario.sobrenome}`)
   $('#total-clientes').html(totalClientes.length)
   $('#renda-nutricionista').html('R$ ' +(totalClientes.length*60).toFixed(2).replace(".",","))
   $('#dietas-pendentes').html(totalClientes.filter(cliente => cliente.dieta.novaDieta).length)
