@@ -269,3 +269,113 @@ table th {
   color: rgb(82, 161, 209);
 }
 
+.send-diet{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.send-diet:hover{
+  scale: 1.12;
+  transform: translateX(6px);
+  transition: all .5s;
+  color: #1b5510;
+}
+
+.modal{
+  display: none;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000008c;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-modal{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabela{
+  max-height: 35vh;
+  overflow-y: scroll;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.diet-modal{
+  position: absolute;
+  background-color: #fff;
+  padding: .8rem;
+  border-radius: .8rem;
+  max-height: 50vh;
+  overflow-y: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.diet-modal button {
+  font-size: 14px;
+  padding: .1rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding-right: .5rem;
+}
+
+.diet-modal button:hover{
+  scale: 1.08;
+  transition: all .5s;
+  color: #1b5510;
+  font-weight: bold;
+}
+
+.diet-modal button i{
+  padding: .5rem;
+  font-size: 18px;
+}
+
+.diet-modal i{
+  font-size: 16px;
+}
+
+.header-modal i{
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.header-modal i:hover{
+  color: red;
+  scale: 1.12;
+  transition: all .5s;
+}
+
+/* .diet-modal-form{
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: .6rem;
+} */
+
+.visible{
+  display: flex;
+}
+
+td .excluir:hover{
+  color: red;
+}
+
+td input, td select{
+  padding: .2rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.2);
+}
+
+
+
