@@ -1,6 +1,7 @@
 $(document).on('ready', async function () {
   let idRegistro = 0
   let idCliente = 0
+  let idDieta = 0
   const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario'))
   const listaAlimentos = await $.get('https://pit2-api.pd8edx.easypanel.host/api/alimento/')
 
@@ -14,6 +15,7 @@ $(document).on('ready', async function () {
       $('#tabela-alimentos tbody tr').remove()
     }
     idCliente = userId
+    idDieta = dietaId
     const modal = document.getElementById('modal').classList.add('visible')
     console.log(modal)
   }
@@ -36,6 +38,7 @@ $(document).on('ready', async function () {
 
     const bodyModal = {
       clienteId: idCliente,
+      // dietaId: idDieta,
       objetivoFoco: 'Mudar de vida',
       dietaAtual: true,
       alimentos: alimentos,
