@@ -2,7 +2,7 @@ $(document).on('ready', async function() {
   const dadosUsuario = JSON.parse(localStorage.getItem('dadosUsuario'))
   let progresso = await $.get(`https://pit2-api.pd8edx.easypanel.host/api/medidas/progresso/cliente/${dadosUsuario.cliente.id}`)
   console.log(progresso.map(progresso => [progresso.dataCriacao, progresso.peso]))
-  progresso = progresso.slice(0,5)
+  progresso = progresso.slice(0,7)
   $('#user-name').text(`Olá, ${dadosUsuario.nome} ${dadosUsuario.sobrenome}!`)
   
   google.charts.load('current', {'packages':['corechart']});
@@ -20,8 +20,8 @@ $(document).on('ready', async function() {
       title: 'Histórico de Peso',
       curveType: 'function',
       legend: { position: 'bottom' },
-      width: 700,
-      height: 250, 
+      'min-width': chartwidth,
+      'max-height': 250, 
       responsive: true
     };
 
@@ -39,15 +39,22 @@ $(document).on('ready', async function() {
     const chartwidth = $('#grafico2').width();  
     var options = {
       title: 'Histórico de IMC',
-      curveType: 'function',
-      legend: { position: 'bottom' },
-      width: 700,
-      height: 250, 
+      vAxis: {title: 'IMC'},
+      hAxis: {title: 'Data'},
+      seriesType: 'bars',
+      series: {5: {type: 'line'}},
+      'min-width': chartwidth,
+      'max-height': 250, 
       responsive: true
     };
 
-    var chart = new google.visualization.LineChart(document.getElementById('grafico2'));
+    var chart = new google.visualization.ComboChart(document.getElementById('grafico2'));
 
     chart.draw(data, options);
   }
+
+  $(window).resize(function(){
+    drawChart();
+    graficoIMC();
+  })
 })

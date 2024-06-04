@@ -6,7 +6,7 @@
 }
 
 body{
-  background-color: #C3ECBC;
+  background-color: #3366CC;
   display: flex;
 }
 
@@ -75,7 +75,7 @@ section {
   border-radius: 10px;
   padding-left: .5rem;
   font-size: 16px;
-  border: 2px solid #C3ECBC;
+  border: 2px solid #3366CC;
   outline: none;
 }
 
@@ -87,22 +87,18 @@ section {
   border-radius: 250px;
   align-items: center;
   text-align: center;
-  background-color: #C3ECBC;
+  background-color: #3366CC;
   border: 2px solid rgba(110, 250, 45, 0.8);
   cursor: pointer;
 }
 
 .active{
-  background-color: #C3ECBC;
+  background-color: #3366CC;
+  color: #fff;
 }
 
 section .breadcrumb .is-active{
-  color: #44a733;
-  font-weight: bold;
-}
-
-section .breadcrumb .is-active{
-  color: #44a733;
+  color: #6C63FF;
   font-weight: bold;
 }
 
@@ -121,10 +117,10 @@ section h1{
 
 .content-card{
   max-height: 100%;
-  background-color: #c6ddc2;
+  background-color: #F2F2F2;
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.2);
+  box-shadow: .1rem .2rem .4rem .2rem rgba(0, 0, 0, 0.2);
 }
 
 .content-card h1{
@@ -138,21 +134,38 @@ table {
 }
 
 table td, table th {
-  border: 1px solid #ddd;
   padding: 8px;
 }
 
 table tr:nth-child(even){background-color: #f2f2f2;}
-table tr{background-color: #ddd;}
+table tr{background-color: #ddd; }
 table tr:hover {background-color: #d1c4c4;}
+
+table tbody{
+  border: 1px solid #ddd;
+}
+
+table thead tr th{
+  border: none;
+}
 
 table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #3366CC;
   color: white;
 }
+
+.left-rounded{
+  border-top-left-radius: 10px;
+  border: none;
+}
+.right-rounded{
+  border-top-right-radius: 10px;
+  border: none;
+}
+
 
 .update-card{
   display: flex;

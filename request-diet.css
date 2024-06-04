@@ -6,7 +6,7 @@
 }
 
 body{
-  background-color: #C3ECBC;
+  background-color: #3366CC;
   display: flex;
 }
 
@@ -73,7 +73,7 @@ section {
   border-radius: 10px;
   padding-left: .5rem;
   font-size: 16px;
-  border: 2px solid #C3ECBC;
+  border: 2px solid #3366CC;
   outline: none;
 }
 
@@ -85,17 +85,18 @@ section {
   border-radius: 250px;
   align-items: center;
   text-align: center;
-  background-color: #C3ECBC;
-  border: 2px solid rgba(110, 250, 45, 0.8);
+  background-color: #3366CC;
+  border: 2px solid #6C63FF;
   cursor: pointer;
 }
 
 .active{
-  background-color: #C3ECBC;
+  background-color: #3366CC;
+  color: #FFF;
 }
 
 section .breadcrumb .is-active{
-  color: #44a733;
+  color: #6C63FF;
   font-weight: bold;
 }
 
@@ -169,7 +170,7 @@ form {
   font-size: 16px;
   font-weight: 500;
   color: #FCFCFD;
-  background-color: #32794f;
+  background-color: #6C63FF;
   border-radius: .5rem;
   border: none;
 }
