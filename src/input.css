@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family:  'Poppins';
+}
+
+.bebas {
+  font-family: "Bebas Neue", sans-serif;
+}

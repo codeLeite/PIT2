@@ -1,0 +1,381 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: #3366CC;
+  display: flex;
+  overflow: hidden;
+}
+
+aside{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 15%;
+  box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.5);
+  background-color: #FCFCFD;
+}
+
+aside img{
+  margin-top: 1rem;
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  margin: 5rem .3rem;
+  width: 95%;
+}
+
+aside button{
+  max-width: 100%;
+  min-width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  padding: .5rem 2rem;
+  padding-left: .5rem;
+  background-color: #FCFCFD;
+  font-size: 16px;
+  margin-top: .7rem;
+  border-radius: 5px;
+  border: none;
+  text-align: left;
+}
+
+aside a button{
+  min-width: 100%;
+}
+
+aside button i{
+  padding-right: .3rem;
+}
+
+aside button a{
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+}
+
+section {
+  width: 100%;
+  margin: 2rem 2rem;
+  background-color: #FCFCFD;
+  box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  overflow-y: scroll;
+  max-height: calc(100vh - 4rem);
+}
+
+.nav-top{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+}
+
+.nav-top input{
+  border-radius: 10px;
+  padding-left: .5rem;
+  font-size: 16px;
+  border: 2px solid #3366CC;
+  outline: none;
+}
+
+.nav-top button{
+  width: 40px;
+  height: 40px;
+  margin-right: 2rem;
+  font-size: 26px;
+  border-radius: 250px;
+  align-items: center;
+  text-align: center;
+  background-color: #3366CC;
+  cursor: pointer;
+}
+
+.active{
+  background-color: #3366CC;
+  color: #fff;
+}
+
+section .breadcrumb .is-active{
+  color: #3366CC;
+  font-weight: bold;
+}
+
+section {
+  padding: 2rem;
+}
+
+section h1{
+  font-size: 2rem;
+}
+
+.diet-wrapper{
+  display: flex;
+  gap: 3%;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.diet-wrapper button{
+  padding: .4rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 20px;
+  border: 1px solid #3366CC;
+  border-radius: 50%;
+  background-color: #FCFCFD;
+  box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.2);
+}
+
+.search{
+  display: flex;
+  border: 1px solid #3366CC;
+  border-radius: 10px;
+  background-color: #FCFCFD;
+  box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.2);
+}
+
+.search input{
+  border: none;
+  background-color: #FCFCFD;
+  margin: .3rem;
+  margin-left: .6rem;
+  font-size: 14px;
+}
+
+.search input{
+  padding: .1rem;
+}
+
+
+
+.search input:focus{
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.search button{
+  padding: 0rem;
+  margin: .2rem;
+  padding-right: .3rem;
+  cursor: pointer;
+  border:none;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 16px;
+}
+
+.diet-card{
+  display: flex;
+  gap: 4%;
+  background-color: #3366CC;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.2);
+  align-items: center;
+}
+
+.diet-icon{
+  background-color: #FCFCFD;
+  height: fit-content;
+  padding: .6rem .7rem;
+  border-radius: .6rem;
+}
+
+.diet-icon i{
+  max-width: 100%;
+  font-size: 1.8rem;
+}
+
+.diet-info p{
+  font-size: 1.1rem;
+}
+
+.diet-highlight{
+  font-weight: bold;
+}
+
+.content-wrapper{
+  max-width: 100%;
+  margin-top: 3.5rem;
+}
+
+.content-card{
+  background-color: #eee;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.2);
+}
+
+.content-card h1{
+  margin-bottom: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+table tr{background-color: #ddd;}
+table tr:hover {background-color: #d1c4c4;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3366CC;
+  color: white;
+}
+
+.update-card{
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  justify-content: space-between;
+  background: #FCFCFD;
+  padding: 1rem 2rem;
+  border-radius: .7rem;
+  box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.2);
+}
+
+.update-card button{
+  padding: .2rem;
+  border: none;
+  background-color: #FCFCFD;
+}
+
+.update-card i{
+  padding: .2rem;
+  font-size: 1rem;
+}
+
+.update-card i:hover{
+  cursor: pointer;
+  color: rgb(82, 161, 209);
+}
+
+.send-diet{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.send-diet:hover{
+  scale: 1.12;
+  transform: translateX(6px);
+  transition: all .5s;
+  color: #112d66;
+}
+
+.modal{
+  display: none;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000008c;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-modal{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabela{
+  max-height: 35vh;
+  overflow-y: scroll;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.diet-modal{
+  position: absolute;
+  background-color: #fff;
+  padding: .8rem;
+  border-radius: .8rem;
+  max-height: 50vh;
+  overflow-y: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.diet-modal button {
+  font-size: 14px;
+  padding: .1rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding-right: .5rem;
+}
+
+.diet-modal button:hover{
+  scale: 1.08;
+  transition: all .5s;
+  color: #1b5510;
+  font-weight: bold;
+}
+
+.diet-modal button i{
+  padding: .5rem;
+  font-size: 18px;
+}
+
+.diet-modal i{
+  font-size: 16px;
+}
+
+.header-modal i{
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.header-modal i:hover{
+  color: red;
+  scale: 1.12;
+  transition: all .5s;
+}
+
+/* .diet-modal-form{
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: .6rem;
+} */
+
+.visible{
+  display: flex;
+}
+
+td .excluir:hover{
+  color: red;
+}
+
+td input, td select{
+  padding: .2rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.2);
+}
+
+
+

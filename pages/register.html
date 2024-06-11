@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="../src/output.css" rel="stylesheet">
+  <link rel="shortcut icon" type="imagex/png" href="../img/logo.png">
+  <title>My Life Fitness - Login</title>
+</head>
+<body>
+  <header class="fixed w-full max-w-[1920px] z-50 h-16 max-h-16 bg-white/30 backdrop-blur-sm">
+    <nav class="flex max-w-7xl mx-auto items-center justify-between max-h-16 px-3">
+      <img src="../img/logo.png" alt="" class="object-cover object-center h-16">
+      <ul class="flex items-center space-x-6">
+        <li class="text-main duration-300 cursor-pointer"><a href="./index.html">Home</a></li>
+        <li class="text-white bg-main rounded-md p-2 duration-300 cursor-pointer"><a href="./register.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="grid lg:grid-cols-2 item bg-img-main bg-no-repeat bg-cover min-h-screen py-20 md:py-10">
+    <section class="flex items-center justify-center text-center flex-col space-y-2 group user w-fit mx-auto" id="toggle-section">
+      <h1 class="font-bold text-2xl group-[.user]:block hidden max-w-[500px]">Faça um cadastro agora e comece a sua evolução!</h1>
+      <img src="../img/register-user.png" alt="" class="m-auto object-cover object-center bg-no-repeat group-[.user]:block hidden max-w-[500px]" >
+      <h1 class="font-bold text-2xl block group-[.user]:hidden max-w-[500px]">Faça seu cadastro agora para adquirir novos clientes!</h1>
+      <img src="../img/register-nutri.png" alt="" class="m-auto w-full object-cover object-center bg-no-repeat block group-[.user]:hidden max-w-[500px]">
+    </section>
+
+    <section class="items-center justify-center text-center hidden" id="user-form">
+      <form onsubmit="" class="flex flex-col space-y-4 backdrop-blur-md bg-white/30 p-3 rounded-md m-2 shadow-2xl" id="cadastro-cliente">
+        <h2 class="font-bold text-lg text-main">Usuário</h2>
+        <h2 class="font-bold text-lg">Preencha o formulário abaixo corretamente</h2>
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-5">
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="nome" id="nome" placeholder="Nome" class="outline-none border-none max-w-full w-full">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome" class="outline-none border-none max-w-full w-full">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-regular fa-calendar"></i>
+            <input type="text" name="data-nasc" placeholder="Data de Nascimento" id="data-nasc" class="outline-none border-none max-w-full w-full">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="email" id="email" placeholder="E-mail" class="outline-none border-none max-w-full w-full">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-mobile"></i>
+            <div class="input-field" class="outline-none border-none">
+            <input type="tel" name="telefone" id="telefone" placeholder="Telefone" class="outline-none border-none max-w-full w-full">
+            </div>
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="senha" id="senha" placeholder="Senha" class="outline-none border-none max-w-full w-full">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="conf-senha" id="conf-senha" class="outline-none border-none max-w-full w-full" placeholder="Confirme sua senha">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-venus-mars"></i>
+            <select name="genero" id="genero" class="max-w-full w-full bg-transparent outline-none">
+              <option value="" class="cursor-not-allowed opacity-0 hidden">Selecione seu gênero</option>
+              <option value="M">Masculino</option>
+              <option value="F">Feminino</option>
+            </select>
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-bullseye"></i>
+            <select name="objetivo" id="objetivo" class="max-w-full w-full bg-transparent outline-none">
+              <option value="" class="cursor-not-allowed hidden">Selecione seu objetivo</option>
+              <option value="hipertrofia">Hipertrofia</option>
+              <option value="emagrecimento">Emagrecimento</option>
+              <option value="manterpeso">Manter Peso</option>
+              <option value="hipertrofia">Ser saudável</option>
+            </select>
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-book"></i>
+            <input type="text" name="observacao" id="observacao" placeholder="Escreva sua observação" class="outline-none border-none max-w-full w-full">
+          </div>
+        </div>
+        <div class="flex gap-2 items-center ml-auto">
+          <p>Já possui uma conta?</p> <a href="../pages/login.html" class="underline text-main hover:text-main/80 duration-300">Entrar</a>
+        </div>
+        <div class="flex gap-2 items-center ml-auto">
+          <p>Não é um cliente?</p> <p class="underline text-main hover:text-main/80 duration-300 cursor-pointer" onclick="toggleForm('nutri-form')">Sou nutricionista</p>
+        </div>
+
+        <button type="submit" class="ml-auto text-white bg-main px-5 py-2 rounded-md hover:bg-main/80 duration-300">Enviar</button>
+      </form>
+    </section>
+    
+    <section class="items-center justify-center text-center hidden" id="nutri-form">
+      <form onsubmit="" class="flex flex-col space-y-4 backdrop-blur-md bg-white/30 p-3 rounded-md m-2 shadow-2xl" id="cadastro-nutri">
+        <h2 class="font-bold text-lg text-main">Nutricionista</h2>
+        <h3 class="font-bold text-lg">Preencha o formulário abaixo corretamente</h3>
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-5">
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="nome" id="nomen" placeholder="Nome" class="outline-none border-none max-w-full w-full">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="sobrenome" id="sobrenomen" placeholder="Sobrenome" class="outline-none border-none max-w-full w-full">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-regular fa-calendar"></i>
+            <input type="text" name="data-nasc" placeholder="Data de Nascimento" id="data-nascimento" class="outline-none border-none max-w-full w-full">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="email" id="emailn" placeholder="E-mail" class="outline-none border-none max-w-full w-full">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-mobile"></i>
+            <div class="input-field" class="outline-none border-none">
+            <input type="tel" name="telefone" id="tel" placeholder="Telefone" class="outline-none border-none max-w-full w-full">
+            </div>
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="senha" id="senhan" placeholder="Senha" class="outline-none border-none max-w-full w-full">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="conf-senha" id="conf-senhan" class="outline-none border-none max-w-full w-full" placeholder="Confirme sua senha">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-venus-mars"></i>
+            <select name="genero" id="generon" class="max-w-full w-full bg-transparent outline-none">
+              <option value="" class="cursor-not-allowed opacity-0 hidden">Selecione seu gênero</option>
+              <option value="M">Masculino</option>
+              <option value="F">Feminino</option>
+            </select>
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-map"></i>
+            <input type="text" name="uf" id="uf" placeholder="UF" maxlength="2" class="outline-none border-none max-w-full w-full">
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-file-signature"></i>
+            <select id="crx" name="select" class="max-w-full w-full bg-transparent outline-none">
+              <option value="crn">CRN</option>
+              <option value="crm" selected>CRM</option>
+            </select>
+          </div>
+          <div class="flex gap-2 items-center bg-white p-2 rounded-md shadow-md">
+            <i class="fa-solid fa-id-card"></i>
+            <input type="number" name="crx-id" id="crx-id" placeholder="Escreva seu id" class="outline-none border-none max-w-full w-full">
+          </div>
+        </div>
+        <div class="flex gap-2 items-center ml-auto">
+          <p>Já possui uma conta?</p> <a href="../pages/login.html" class="underline text-main hover:text-main/80 duration-300">Entrar</a>
+        </div>
+        <div class="flex gap-2 items-center ml-auto">
+          <p>Não é um nutricionista?</p> <p class="underline text-main hover:text-main/80 duration-300 cursor-pointer" onclick="toggleForm('user-form')">Sou cliente</p>
+        </div>
+
+        <button type="submit" class="ml-auto text-white bg-main px-5 py-2 rounded-md hover:bg-main/80 duration-300">Enviar</button>
+      </form>
+    </section>
+
+    <section class="grid md:grid-cols-2 grid-cols-1 items-center justify-center gap-4 text-center max-h-fit h-fit m-auto mx-4" id="select-form">
+      <div onclick="toggleForm('nutri-form')" class="border-2 border-main border-dotted py-2 px-1 h-full rounded-md cursor-pointer">
+        <h2 class="font-bold text-main text-center text-lg">Nutricionistas</h2>
+        <p>Acesso para cadastro destinado somente aos nutricionistas autorizados com <b>CRM/CRN</b></p>
+      </div>
+      <div onclick="toggleForm('user-form')" class="border-2 border-main border-dotted py-2 px-1 h-full rounded-md cursor-pointer">
+        <h2 class="font-bold text-main text-center text-lg">Usuários</h2>
+        <p>Acesso para cadastro destinado somente aos clientes que desejam se registrar em nosso banco de dados e consultar com um nutricionista</p>
+      </div>
+    </section>
+  </div>
+</body>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/jquery.mask.min.js"></script>
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/messages_pt_BR.min.js"></script>
+<script src="../js/register.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/2ec39d4a84.js" crossorigin="anonymous"></script>
+</html>

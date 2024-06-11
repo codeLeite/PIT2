@@ -1,0 +1,72 @@
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+table td, table th {
+  padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+table tr{background-color: #ddd; }
+table tr:hover {background-color: #d1c4c4;}
+
+table thead tr th{
+  border: none;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3366CC;
+  color: white;
+}
+
+.left-rounded{
+  border-top-left-radius: 10px;
+  border: none;
+}
+.right-rounded{
+  border-top-right-radius: 10px;
+  border: none;
+}
+
+.update-card{
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  justify-content: space-between;
+  background: #FCFCFD;
+  padding: 1rem 2rem;
+  border-radius: .7rem;
+  box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.2);
+}
+
+.update-card button{
+  padding: .2rem;
+  border: none;
+  background-color: #FCFCFD;
+}
+
+.update-card i{
+  padding: .2rem;
+  font-size: 1rem;
+}
+
+.update-card i:hover{
+  cursor: pointer;
+  color: rgb(82, 161, 209);
+}
+
+@media (max-width: 1200px) {
+  .diet-wrapper{
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}

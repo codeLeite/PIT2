@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="../src/output.css" rel="stylesheet">
+    <link href="/src/styles/anamnese-user.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <title>Anamnese - User</title>
+</head>
+<body>
+    <section class="grid grid-cols-1 md:grid-cols-2 items-center justify-center min-h-screen bg-img-main gap-8 px-4">
+        <div class="space-y-8 max-w-[700px] mx-auto">
+            <div class="flex flex-col items-center space-y-4">
+                <h1 class="text-4xl text-center font-bold text-main">Anamnese</h1>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cumque reiciendis suscipit. Aliquid esse labore libero quia suscipit tempora ut? Commodi, distinctio, perspiciatis. Explicabo inventore magni perferendis soluta, vel velit?</p>
+            </div>
+            <div class="flex space-x-4 text-lg">
+                <i class="fa-solid fa-circle-check text-main"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab at commodi cupiditate delectus enim eum hic, laborum </p>
+            </div><div class="flex space-x-4 text-lg">
+                <i class="fa-solid fa-circle-check text-main"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores.</p>
+            </div><div class="flex space-x-4 text-lg">
+                <i class="fa-solid fa-circle-check text-main"></i>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+
+        <section class="py-4">
+            <form class="max-h-full h-full bg-[#eee] rounded-md p-4 space-x-4 space-y-4 flex flex-col">
+                <table>
+                    <thead class="space-x-3">
+                        <tr class="space-x-2 text-center">
+                            <th class="rounded-tl-md">Perguntas</th>
+                            <th class="px-2">Sim</th>
+                            <th class="rounded-tr-md">Não</th>
+                        </tr>
+                    </thead>
+                    <tbody class="space-y-3">
+                        <tr>
+                            <td>
+                                <p>1 - Algum médico ja lhe disse que você é portador de alguma doença cardiovascular e recomendou que somente deve realizar exercício físico sob supervisão médica?</p>
+                            </td>
+                            <td>
+                                <input type="radio" value="true"  name="disease-carrie" class="accent-main" />
+                            </td>
+                            <td>
+                                <input type="radio" value="false" name="disease-carrie" class="accent-main"/>
+                            </td>
+                        </tr>
+                        <tr class="space-x-3">
+                            <td>
+                                <p>2 - Você sente dor no tórax quando realiza uma atividades física?</p>
+                            </td>
+                            <td>
+                                <input type="radio" value="true"  name="torax-pain" class="accent-main" />
+                            </td>
+                            <td>
+                                <input type="radio" value="false" name="torax-pain" class="accent-main"/>
+                            </td>
+                        </tr>
+                        <tr class="space-x-3">
+                            <td>
+                                <p>3 - No ultimo mês, você teve dor toraxica quando não estava realizando uma atividade física?</p>
+                            </td>
+                            <td>
+                                <input type="radio" value="true"  name="torax-pain-month" class="accent-main" />
+                            </td>
+                            <td>
+                                <input type="radio" value="false" name="torax-pain-month" class="accent-main"/>
+                            </td>
+                        </tr>
+                        <tr class="space-x-3">
+                            <td>
+                                <p>4 - Você perdeu o equilíbrio em virtude de uma tonteira ou já perdeu a consciência?</p>
+                            </td>
+                            <td>
+                                <input type="radio" value="true"  name=loss-balance" class="accent-main" />
+                            </td>
+                            <td>
+                                <input type="radio" value="false" name=loss-balance" class="accent-main"/>
+                            </td>
+                        </tr>
+                        <tr class="space-x-3">
+                            <td>
+                                <p>5 - Você sofre de algum problema osseo, articular ou muscular que poderia ser agravado com a prática da atividade física?</p>
+                            </td>
+                            <td>
+                                <input type="radio" value="true"  name=bone-problem" class="accent-main" />
+                            </td>
+                            <td>
+                                <input type="radio" value="false" name=bone-problem" class="accent-main"/>
+                            </td>
+                        </tr>
+                        <tr class="space-x-3">
+                            <td>
+                                <p>6 - Algum médico já lhe recomendou e receitou medicamentos para pressão arterial ou alguma condição cardíaca?</p>
+                            </td>
+                            <td>
+                                <input type="radio" value="true"  name=blood-pressure" class="accent-main" />
+                            </td>
+                            <td>
+                                <input type="radio" value="false" name=blood-pressure" class="accent-main"/>
+                            </td>
+                        </tr>
+                        <tr class="space-x-3">
+                            <td>
+                                <p>7 - Você está a par de alguma outra razão pela qual não deveria praticar uma atividade física?</p>
+                            </td>
+                            <td>
+                                <input type="radio" value="true"  name=physical-activity" class="accent-main" />
+                            </td>
+                            <td>
+                                <input type="radio" value="false" name=physical-activity" class="accent-main"/>
+                            </td>
+                        </tr>
+                        <tr class="space-x-3">
+                            <td>
+                                <p>8 - Você possui alguma alergia? Se sim, escreva no campo abaixo</p>
+                            </td>
+                            <td>
+                                <input type="radio" value="true"  name=allergic" class="accent-main" />
+                            </td>
+                            <td>
+                                <input type="radio" value="false" name=allergic" class="accent-main"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="submit" class="ml-auto bg-main text-white w-fit px-8 py-2.5 rounded-md">Enviar</button>
+            </form>
+        </section>
+
+    </section>
+</body>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/jquery.mask.min.js"></script>
+<script src="../js/jquery.validate.min.js"></script>
+<script src=".,/js/messages_pt_BR.min.js"></script>
+<script src="../js/clientes-nutritionist.js"></script>
+<script src="https://kit.fontawesome.com/2ec39d4a84.js" crossorigin="anonymous"></script>
+</html>
