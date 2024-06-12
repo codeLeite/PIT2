@@ -5,7 +5,7 @@ $(document).on('ready', async () =>{
 
   $('#user-name').text(`Olá, ${dadosUsuario.nome} ${dadosUsuario.sobrenome}`)
   $('#total-clientes').html(totalClientes.length)
-  $('#renda-nutricionista').html('R$ ' +(totalClientes.length*60).toFixed(2).replace(".",","))
+  $('#renda-nutricionista').html('R$ ' +((totalClientes.length*60)*0.95).toFixed(2).replace(".",","))
   $('#dietas-pendentes').html(totalClientes.filter(cliente => cliente.dieta.novaDieta).length)
 
   for(const {dieta} of clientesPendentes){

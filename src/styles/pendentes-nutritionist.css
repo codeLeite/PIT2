@@ -312,7 +312,7 @@ table th {
   padding: .8rem;
   border-radius: .8rem;
   max-height: 50vh;
-  overflow-y: hidden;
+  overflow-y: scroll;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -375,6 +375,11 @@ td input, td select{
   border-radius: 5px;
   border: none;
   box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.2);
+}
+
+.info-nutri p{
+  font-size: 12px;
+  font-weight: bold;
 }
 
 
