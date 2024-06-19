@@ -57,4 +57,16 @@ $(document).on('ready', async function() {
     drawChart();
     graficoIMC();
   })
+
+  
+  progresso.sort((a,b)=>new Date(b.dataCriacao)-new Date(a.dataCriacao))
+  const handlerRegister = progresso.slice(0,6)
+  handlerRegister.forEach(medida => {
+    const template = $($('#template-evolucao').html()).clone();
+    template.find(".data").text(new Date(medida.dataCriacao).toLocaleDateString('pt-BR'));
+    template.find(".peso").text(medida.peso);
+    template.find(".imc").text(medida.valorImc);
+    template.find(".bf").text(medida.valorBf);
+    $("table#tabela-evolucao tbody").append(template);
+  });
 })

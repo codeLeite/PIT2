@@ -103,6 +103,7 @@ section .breadcrumb .is-active{
 }
 
 section h1{
+  font-weight: bold;
   font-size: 2rem;
 }
 
@@ -123,8 +124,10 @@ section h1{
   box-shadow: .1rem .2rem .4rem .2rem rgba(0, 0, 0, 0.2);
 }
 
-.content-card h1{
+.content-card h2{
   margin-bottom: 1rem;
+  font-weight: bolder;
+  font-size: 22px;
 }
 
 table {

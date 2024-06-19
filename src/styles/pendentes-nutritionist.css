@@ -67,7 +67,7 @@ section {
   background-color: #FCFCFD;
   box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.5);
   border-radius: 15px;
-  overflow-y: scroll;
+  overflow-y: hidden;
   max-height: calc(100vh - 4rem);
 }
 
@@ -113,7 +113,12 @@ section {
 }
 
 section h1{
+  font-weight: bold;
   font-size: 2rem;
+}
+section h2{
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .diet-wrapper{
@@ -312,7 +317,7 @@ table th {
   padding: .8rem;
   border-radius: .8rem;
   max-height: 50vh;
-  overflow-y: hidden;
+  overflow-y: scroll;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -377,5 +382,18 @@ td input, td select{
   box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.2);
 }
 
+.info-nutri p{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.left-rounded{
+  border-top-left-radius: 10px;
+  border: none;
+}
+.right-rounded{
+  border-top-right-radius: 10px;
+  border: none;
+}
 
 

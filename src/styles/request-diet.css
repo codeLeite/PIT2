@@ -145,6 +145,22 @@ section h1{
   padding: 8px;
 }
 
+.form-campo-hips{
+  margin-bottom: 1rem;
+}
+
+.form-campo-hips label{
+  font-weight: 400;
+  display: block;
+  text-align: start;
+}
+
+.form-campo-hips input, .form-campo-hips select{
+  width: 100%;
+  display: block;
+  padding: 8px;
+}
+
 input[type=number]::-webkit-inner-spin-button { 
   -webkit-appearance: none;
 }
@@ -171,6 +187,16 @@ form {
 }
 
 .form-campo input::placeholder { 
+  color: #d8d8d8; 
+}
+
+.form-campo-hips input[type=text], .form-campo-hips input[type=date],.form-campo-hips input[type=number], .form-campo-hips select, .form-radio-campo{
+  border-radius: .5rem;
+  border: 1px solid #CCCCCC;
+  box-shadow: .1rem .0rem .4rem .0rem rgba(0, 0, 0, 0.2);
+}
+
+.form-campo-hips input::placeholder { 
   color: #d8d8d8; 
 }
 
@@ -208,4 +234,8 @@ form {
 
 .sub-label{
   font-size: 12px;
+}
+
+.hidden{
+  display: none;
 }

@@ -55,6 +55,7 @@ $(document).on('ready', async function () {
     $(template).attr('id', `linha-${idRegistro++}`)
     await carregarAlimentos($(template).find('select#select-options'))
     $(template).find('.excluir').on('click', excluirLinha)
+    $(template).find('.quantidade').on('blur', calcularInfo)
     $('#tabela-alimentos tbody').append(template)
   }
 
@@ -86,5 +87,31 @@ $(document).on('ready', async function () {
     for (const alimento of listaAlimentos) {
       $(seletor).append(`<option value='${alimento.id}'>${alimento.nome}</option>`)
     }
+  }
+
+  async function calcularInfo(){
+    const alimento = $($(this).parents('tr')).find('select.select-options').val()
+    const quantidade = $($(this).parents('tr')).find('input.quantidade').val()
+    const alimentoNaLista = listaAlimentos.filter(e => e.id == alimento)[0]
+    const calculo = {
+      calorias: ((alimentoNaLista.calorias/100)*quantidade).toFixed(2),
+      carboidratos: ((alimentoNaLista.carboidratos/100)*quantidade).toFixed(2),
+      proteinas: ((alimentoNaLista.proteinas/100)*quantidade).toFixed(2),
+      gorduras: ((alimentoNaLista.gorduras/100)*quantidade).toFixed(2)
+    }
+    // if($('#calorias-totais').text() === '') $('#calorias-totais').text(calculo.calorias)
+    // else $('#calorias-totais').text(calculo.calorias + parseFloat($('#calorias-totais').text()))
+    const caloriasAtuais = parseFloat($('#calorias-totais').text()) || 0;
+    const novasCalorias = caloriasAtuais + parseFloat(calculo.calorias);
+    $('#calorias-totais').text(novasCalorias)
+    const carboidratosAtuais = parseFloat($('#carboidratos-totais').text()) || 0;
+    const novosCarboidratos = carboidratosAtuais + parseFloat(calculo.carboidratos);
+    $('#carboidratos-totais').text(novosCarboidratos)
+    const proteinasAtuais = parseFloat($('#proteinas-totais').text()) || 0;
+    const novasProteinas = proteinasAtuais + parseFloat(calculo.proteinas);
+    $('#proteinas-totais').text(novasProteinas)
+    const gordurasAtuais = parseFloat($('#gorduras-totais').text()) || 0;
+    const novasGorduras = gordurasAtuais + parseFloat(calculo.gorduras);
+    $('#gorduras-totais').text(novasGorduras)
   }
 })
