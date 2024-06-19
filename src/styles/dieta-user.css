@@ -196,3 +196,12 @@ table th {
   cursor: pointer;
   color: rgb(82, 161, 209);
 }
+
+
+div.container > div.nav-top > p{
+  padding: 16px;
+    border-radius: 8px;
+    background-color: #3366cc;
+    color: white;
+    font-weight: bold;
+}
