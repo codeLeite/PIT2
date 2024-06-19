@@ -45,54 +45,29 @@
   <div class="content-wrapper">
     <div class="content-card">
       <h2>Sua evolução</h2>
-      <table>
+      <table id="tabela-evolucao">
         <thead>
           <tr>
             <th class="left-rounded">Data</th>
             <th>Peso</th>
+            <th>IMC</th>
             <th class="right-rounded">% de gordura</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <p>03/04/2024</p>
-            </td>
-            <td>82.5kg</td>
-            <td>12%</td>
-          </tr>
-          <tr>
-            <td>
-              <p>03/04/2024</p>
-            </td>
-            <td>82.5kg</td>
-            <td>15%</td>
-          </tr>
-          <tr>
-            <td>
-              <p>03/04/2024</p>
-            </td>
-            <td>82.5kg</td>
-            <td>18%</td>
-          </tr>
-          <tr>
-            <td>
-              <p>03/04/2024</p>
-            </td>
-            <td>82.5kg</td>
-            <td>15%</td>
-          </tr>
-          <tr>
-            <td>
-              <p>03/04/2024</p>
-            </td>
-            <td>82.5kg</td>
-            <td>12%</td>
-          </tr>
+          
         </tbody>
       </table>
     </div>
  </section>
+ <template id="template-evolucao" type="text/template">
+  <tr>
+    <td class="data"></td>
+    <td class="peso"></td>
+    <td class="imc"></td>
+    <td class="bf"></td>
+  </tr>
+ </template>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="../js/jquery.mask.min.js"></script>

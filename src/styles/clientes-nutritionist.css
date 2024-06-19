@@ -71,6 +71,16 @@ section {
   max-height: calc(100vh - 4rem);
 }
 
+section h1{
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+section h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .nav-top{
   display: flex;
   justify-content: space-between;
@@ -269,3 +279,11 @@ table th {
   color: rgb(82, 161, 209);
 }
 
+.left-rounded{
+  border-top-left-radius: 10px;
+  border: none;
+}
+.right-rounded{
+  border-top-right-radius: 10px;
+  border: none;
+}

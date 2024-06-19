@@ -27,6 +27,7 @@ $('#form-request').on('submit', async function(e){
   const body = {
     "clienteId": dadosUsuario.cliente.id,
     "objetivoFoco": $('#tipo-dieta option:selected').text(),
+    "pesoAtual": $('#peso').val(),
     "nutricionista": {
       "nutricionistaId": $('#nutricionistas').val()
     }
@@ -36,7 +37,7 @@ $('#form-request').on('submit', async function(e){
       "clienteId": dadosUsuario.cliente.id,
       "altura": $('#altura').val(),
       "peso": $('#peso').val(),
-      "circunferenciaQuadril": $('#circHips').val(),
+      "circunferenciaQuadril": $('#circHips').val() || undefined,
       "circunferenciaCintura": $('#circWaist').val(),
       "circunferenciaPescoco": $('#circNeck').val(),
     }
@@ -44,4 +45,5 @@ $('#form-request').on('submit', async function(e){
   alert(response.message)
   const responseMedidas = await $.post('https://pit2-api.pd8edx.easypanel.host/api/medidas',bodyMedidas)
   alert(responseMedidas.message)
+  window.location.href = './anamnese-user.html'
 })
