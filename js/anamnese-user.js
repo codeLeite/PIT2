@@ -1,5 +1,6 @@
 $(document).on("ready", async () => {
-    $("form").on("submit", async () => {
+    $("form").on("submit", async (e) => {
+        e.preventDefault();
         const dadosUsuario = JSON.parse(localStorage.getItem(("dadosUsuario")))
         const checkedForms = $("input[value=true]:checked").length
         const tipoPerfil = checkedForms > 3 ? "Perfil Especial" : "Perfil Normal";
