@@ -1,4 +1,4 @@
-document.on("ready", async () => {
+$(document).on("ready", async () => {
     $("form").on("submit", async () => {
         const dadosUsuario = JSON.parse(localStorage.getItem(("dadosUsuario")))
         const checkedForms = $("input[value=true]:checked").length
