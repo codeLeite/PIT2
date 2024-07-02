@@ -16,7 +16,7 @@ $(document).on('ready', async function () {
     }
     idCliente = userId
     idDieta = dietaId
-    $("#perfil").text('Tipo Perfil: '+tipoPerfil)
+    $("#perfil").html('<b>Tipo</b> '+tipoPerfil)
     const modal = document.getElementById('modal').classList.add('visible')
     console.log(modal)
   }
