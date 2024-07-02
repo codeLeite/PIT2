@@ -10,12 +10,13 @@ $(document).on('ready', async function () {
   $('#adicionar-registro').on('click', adicionarRegistro)
   $('#close-modal').on('click', closeModal)
 
-  async function modalDieta(dietaId, userId) {
+  async function modalDieta(dietaId, userId, tipoPerfil) {
     if (idCliente !== userId){
       $('#tabela-alimentos tbody tr').remove()
     }
     idCliente = userId
     idDieta = dietaId
+    $("#perfil").text('Tipo Perfil: '+tipoPerfil)
     const modal = document.getElementById('modal').classList.add('visible')
     console.log(modal)
   }
@@ -77,7 +78,7 @@ $(document).on('ready', async function () {
       template
         .find('.send-diet')
         .attr('diet-id', dieta.id)
-        .on('click', _ => modalDieta(dieta.id, dieta.cliente.id))
+        .on('click', _ => modalDieta(dieta.id, dieta.cliente.id, dieta.cliente.tipoPerfil))
       $('table#tabela-pendentes tbody').append(template)
     }
   }
